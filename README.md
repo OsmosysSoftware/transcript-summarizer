@@ -3,7 +3,7 @@
 
  ## Prerequisites
 
-To run this project, you need to have Python version 3.6 or above installed in your system.
+To run this project, you need to have Python version 3.6 or above installed on your system.
 - [Download Python](https://www.python.org/downloads/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [OpenAI Account](https://platform.openai.com/api-keys) for API key
@@ -17,7 +17,7 @@ To run this project, you need to have Python version 3.6 or above installed in y
 pip install -r requirements.txt
 ```
 
-2. Create a new file `.env`. Copy all data from [env example](./env-example) and paste it in `.env`.
+2. Create a new file `.env`. Copy all data from the [env example](./env-example) and paste it in `.env`.
 
 3. Add your API key to `.env`
 ```shell

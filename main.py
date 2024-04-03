@@ -52,7 +52,6 @@ def create_output_file(output_folder, filename, response):
     # write data in new file
     with open(file_path, "w") as outputFile:
         outputFile.writelines(response)
-        outputFile.close()
         print(f"=======================\nResponse saved in {file_path}\n=======================\n")
 
 ### Function that generates minutes of meeting using transcript snippets
@@ -104,7 +103,7 @@ def summarize_meeting_using_chatbot(context):
 def main():
     # Initialize input and output folders
     input_folder_path = os.getenv("INPUT_PATH")
-    output_folder_path = os.getenv("OUPUT_PATH")
+    output_folder_path = os.getenv("OUTPUT_PATH")
 
     # Get Filename set input folder to create meeting minutes of
     filename = 'sample-site-creation.txt'
