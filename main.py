@@ -9,47 +9,6 @@ load_dotenv()
 # Initialize OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-###-------------Backup functions here-------------###
-
-"""
-# Function to read all data from inputs folder
-# Currently not in use
-
-def read_text_files(input_folder_path):
-    text_data = {}
-    for filename in os.listdir(input_folder_path):
-        if filename.endswith('.txt'):
-            file_path = os.path.join(input_folder_path, filename)
-        with open(file_path, 'r') as file:
-                content = file.read()
-                file.close()
-                text_data[filename] = content.rstrip('\n')
-    return text_data
-"""
-
-"""
-# Helper function to display transcript data
-# Not in use
-
-def display_data_in_transcripts(transcripts_dict):
-    for key in transcripts_dict:
-        print(f"-----------\nkey:")
-        print(key)
-        print(f"=========\nvalue:")
-        print(transcripts_dict.get(key))
-"""
-
-"""
-# Function to get transcript data in chunks from file
-def get_transcript_data(input_folder_path, filename):
-    file_path = os.path.join(input_folder_path, filename)
-    with open(file_path, 'r') as file:
-        data_from_file = file.read()
-        file.close()
-    print(f'Using data from {filename}\n-----------------------\n')
-    return data_from_file
-"""
-
 ###-------------Functions declared here-------------###
 
 ### Function to chunk file
