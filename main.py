@@ -11,7 +11,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 ###-------------Functions declared here-------------###
 
-### Function to chunk file
+### Function to chunk file so that it is within token limit of gpt-3.5
 def chunk_file(input_folder_path, filename, chunk_size):
     print(f'\n-----------------------\nUsing data from {filename}\n-----------------------\n')
     input_file = os.path.join(input_folder_path, filename)
@@ -115,13 +115,13 @@ def main():
 
     # Variables for assigning chunk data
     chunk_size = 930
-    output_chunk_folder_path = f"{output_folder_path}//{formatted_time}_{no_ext_filename}_output"
+    output_chunk_folder_path = os.path.join(output_folder_path, f"{formatted_time}_{no_ext_filename}_output")
     output_files_prefix = "_output_chunk_"
 
+    # Call the bot for a response by giving chunks of input of and store it in an output file
     for i, chunk in enumerate(chunk_file(input_folder_path, filename, chunk_size)):
         print(f"------------- Evaluating chunk {i + 1} -------------")
         output_file_name = f"{no_ext_filename}{output_files_prefix}{i+1}"
-
         chatgpt_reply = summarize_meeting_using_chatbot(chunk)
         create_output_file(output_chunk_folder_path, output_file_name, chatgpt_reply)
 
