@@ -1,6 +1,6 @@
 # transcript-summarizer
 
-TranscriptSummarizer is a CLI tool that quickly turns call transcripts into concise meeting minutes, highlighting key points and actions. Ideal for saving time and capturing essential details from any text-based transcript.
+Transcript Summarizer is a CLI tool that quickly turns call transcripts into concise meeting minutes, highlighting key points and actions. Ideal for saving time and capturing essential details from any text-based transcript.
 
 ## Prerequisites
 
@@ -26,12 +26,11 @@ To run this project, you need to have Python version 3.6 or above installed on y
 
 ## Run
 
-1. Paste the transcript file for which you want meeting minutes in [input folder](./input). Set the name as `your-file-name.txt` .
+1. Paste the transcript file for which you want meeting minutes in [input folder](./input). Set the name as `your-file-name.txt`.
 
 2. In [main function](./main.py), replace the variable `filename` with the name of your transcript file (set in input folder).
 
-3. Run the program by pressing the run button in VS Code. Alternatively, execute the following command in root directory:
-
+3. Run the program by pressing the run button in VS Code. Alternatively, execute the following command in the root directory:
     ```shell
     python -u "./main.py"
     ```
